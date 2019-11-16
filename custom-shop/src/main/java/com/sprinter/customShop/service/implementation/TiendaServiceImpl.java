@@ -1,50 +1,23 @@
-package com.sprinter.customShop.customshop.service.implementation;
+package com.sprinter.customShop.service.implementation;
 
-import com.sprinter.customShop.customshop.entity.Tienda;
-import com.sprinter.customShop.customshop.service.TiendaService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Service;
 
-public class TiendaServiceImpl implements TiendaService{
+import com.sprinter.customShop.dao.TiendaDao;
+import com.sprinter.customShop.entity.Tienda;
+import com.sprinter.customShop.service.AbstractService;
+import com.sprinter.customShop.service.TiendaService;
 
-	@Override
-	public Iterable<Tienda> findAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+@Service
+public class TiendaServiceImpl extends AbstractService<Tienda, Long> implements TiendaService {
 
-	@Override
-	public Tienda findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	@Autowired
+	private TiendaDao tiendaDao;
 
 	@Override
-	public Tienda save(Tienda e) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Iterable<Tienda> save(Iterable<Tienda> es) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Tienda update(Tienda e) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Iterable<Tienda> update(Iterable<Tienda> es) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void remove(Tienda e) {
-		// TODO Auto-generated method stub
-		
+	protected CrudRepository<Tienda, Long> getDAO() {
+		return this.tiendaDao;
 	}
 
 }

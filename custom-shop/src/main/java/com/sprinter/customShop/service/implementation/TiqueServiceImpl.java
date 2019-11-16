@@ -1,50 +1,23 @@
-package com.sprinter.customShop.customshop.service.implementation;
+package com.sprinter.customShop.service.implementation;
 
-import com.sprinter.customShop.customshop.entity.Tique;
-import com.sprinter.customShop.customshop.service.TiqueService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Service;
 
-public class TiqueServiceImpl implements TiqueService{
+import com.sprinter.customShop.dao.TiquetDao;
+import com.sprinter.customShop.entity.Tique;
+import com.sprinter.customShop.service.AbstractService;
+import com.sprinter.customShop.service.TiqueService;
 
-	@Override
-	public Iterable<Tique> findAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+@Service
+public class TiqueServiceImpl extends AbstractService<Tique, Long> implements TiqueService {
 
-	@Override
-	public Tique findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	@Autowired
+	private TiquetDao tiquetDao;
 
 	@Override
-	public Tique save(Tique e) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Iterable<Tique> save(Iterable<Tique> es) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Tique update(Tique e) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Iterable<Tique> update(Iterable<Tique> es) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void remove(Tique e) {
-		// TODO Auto-generated method stub
-		
+	protected CrudRepository<Tique, Long> getDAO() {
+		return this.tiquetDao;
 	}
 
 }

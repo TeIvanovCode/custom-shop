@@ -1,50 +1,23 @@
-package com.sprinter.customShop.customshop.service.implementation;
+package com.sprinter.customShop.service.implementation;
 
-import com.sprinter.customShop.customshop.entity.Productos;
-import com.sprinter.customShop.customshop.service.ProductosService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Service;
 
-public class ProductosServiceImpl implements ProductosService{
+import com.sprinter.customShop.dao.ProductosDao;
+import com.sprinter.customShop.entity.Productos;
+import com.sprinter.customShop.service.AbstractService;
+import com.sprinter.customShop.service.ProductosService;
 
-	@Override
-	public Iterable<Productos> findAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+@Service
+public class ProductosServiceImpl extends AbstractService<Productos, Long> implements ProductosService {
 
-	@Override
-	public Productos findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	@Autowired
+	private ProductosDao productosDao;
 
 	@Override
-	public Productos save(Productos e) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Iterable<Productos> save(Iterable<Productos> es) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Productos update(Productos e) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Iterable<Productos> update(Iterable<Productos> es) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void remove(Productos e) {
-		// TODO Auto-generated method stub
-		
+	protected CrudRepository<Productos, Long> getDAO() {
+		return this.productosDao;
 	}
 
 }
