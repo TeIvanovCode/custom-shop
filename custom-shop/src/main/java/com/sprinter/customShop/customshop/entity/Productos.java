@@ -1,4 +1,4 @@
-package com.sprinter.customShop.entity;
+package com.sprinter.customShop.customshop.entity;
 
 import java.math.BigDecimal;
 
@@ -22,7 +22,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "PRODUCTOS")
-public class Productos {
+public class Productos implements EntityPadre {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)

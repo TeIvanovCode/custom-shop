@@ -1,4 +1,4 @@
-package com.sprinter.customShop.entity;
+package com.sprinter.customShop.customshop.entity;
 
 import java.time.LocalDate;
 
@@ -22,7 +22,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "TIQUE")
-public class Tique {
+public class Tique implements EntityPadre{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
