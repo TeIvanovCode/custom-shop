@@ -1,4 +1,4 @@
-package com.sprinter.customShop.customshop.entity;
+package com.sprinter.customShop.entity;
 
 import java.time.LocalDate;
 
@@ -21,18 +21,28 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "TIQUE")
-public class Tique implements EntityPadre{
+@Table(name = "TIENDA")
+public class Tienda implements EntityPadre{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
-	private Long idTique;
+	private Long idTienda;
 
 	@Column
-	private LocalDate fecha;
+	private String nombre;
 	
-	// TODO: Posible cambio a enumeracion
 	@Column
-	private String modoPago;
+	private String direccion;
+	
+	@Column
+	private String provincia;
+	
+	//TODO: posible cambio a enumeracion
+	@Column
+	private String tipo;
+	
+	@Column
+	private LocalDate fechaApertura;
 	
 }
+

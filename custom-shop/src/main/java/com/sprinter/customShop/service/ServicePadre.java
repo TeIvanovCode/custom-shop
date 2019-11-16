@@ -1,6 +1,6 @@
-package com.sprinter.customShop.customshop.service;
+package com.sprinter.customShop.service;
 
-import com.sprinter.customShop.customshop.entity.EntityPadre;
+import com.sprinter.customShop.entity.EntityPadre;
 
 public interface ServicePadre <E extends EntityPadre, ID>{
 

@@ -7,3 +7,5 @@ custom-shop/target/*
 
 custom-shop/target/classes/META-INF/maven/com.sprinter.customShop/custom-shop/pom.properties
 
+
+custom-shop/.springBeans

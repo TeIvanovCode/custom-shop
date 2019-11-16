@@ -1,10 +1,10 @@
-package com.sprinter.customShop.customshop.service;
+package com.sprinter.customShop.service;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.sprinter.customShop.customshop.entity.EntityPadre;
+import com.sprinter.customShop.entity.EntityPadre;
 
-public abstract class AbstactService<E extends EntityPadre, ID> implements ServicePadre<E, ID> {
+public abstract class AbstractService<E extends EntityPadre, ID> implements ServicePadre<E, ID> {
 
 	protected abstract CrudRepository<E, ID> getDAO();
 

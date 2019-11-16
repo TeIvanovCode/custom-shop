@@ -1,4 +1,4 @@
-package com.sprinter.customShop.customshop.entity;
+package com.sprinter.customShop.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
