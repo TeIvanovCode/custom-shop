@@ -14,17 +14,16 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-public class CodigosBarra implements EntityPadre{
+public class CodigosBarra implements EntityPadre {
 
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
+
 	@Column
 	private String ean;
-	
+
 	@Column
 	private boolean flgPrincipal;
-	
+
 }

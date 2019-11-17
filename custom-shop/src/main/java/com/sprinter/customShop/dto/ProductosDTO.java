@@ -23,6 +23,6 @@ public class ProductosDTO implements DTOEntity {
 
 	private String subSeccion;
 
-	private BigDecimal pvp;	
+	private BigDecimal pvp;
 
 }

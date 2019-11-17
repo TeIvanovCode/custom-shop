@@ -30,25 +30,25 @@ public class Productos implements EntityPadre {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
+
 	@Column
 	private String nombre;
-	
+
 	@Column
 	private String descripcion;
-	
+
 	@Column
 	private String area;
-	
+
 	@Column
 	private String seccion;
-	
+
 	@Column
 	private String subSeccion;
-	
+
 	@Column
 	private BigDecimal pvp;
-	
+
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "proveedor")
 	private Proveedor proveedor;

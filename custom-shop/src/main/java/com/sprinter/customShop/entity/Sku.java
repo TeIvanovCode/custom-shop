@@ -14,14 +14,13 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-public class Sku implements EntityPadre{
+public class Sku implements EntityPadre {
 
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
+
 	@Column
 	private String descripcion;
-	
+
 }

@@ -9,7 +9,7 @@ import com.sprinter.customShop.entity.Tique;
 @RestController
 @RequestMapping("/tique")
 public class TiqueController extends AbstractController<TiqueDTO, Tique, Long> {
-	
+
 	protected TiqueController() {
 		super(Tique.class, TiqueDTO.class);
 	}

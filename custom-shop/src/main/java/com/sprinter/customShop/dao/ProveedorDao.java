@@ -5,12 +5,11 @@ import org.springframework.stereotype.Repository;
 
 import com.sprinter.customShop.entity.Proveedor;
 
-
 /**
  * @author Teodor Ivanov
  *
  */
 @Repository
-public interface ProveedorDao extends CrudRepository<Proveedor, Long>{
+public interface ProveedorDao extends CrudRepository<Proveedor, Long> {
 
 }

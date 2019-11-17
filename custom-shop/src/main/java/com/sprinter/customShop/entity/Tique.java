@@ -28,7 +28,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "TIQUE")
-public class Tique implements EntityPadre{
+public class Tique implements EntityPadre {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -36,8 +36,8 @@ public class Tique implements EntityPadre{
 
 	@Temporal(TemporalType.DATE)
 	private Date fecha;
-	
+
 	@Enumerated(EnumType.STRING)
 	private ModoPago modoPago;
-	
+
 }

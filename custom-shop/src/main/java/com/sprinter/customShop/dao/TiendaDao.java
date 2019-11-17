@@ -10,6 +10,6 @@ import com.sprinter.customShop.entity.Tienda;
  *
  */
 @Repository
-public interface TiendaDao extends CrudRepository<Tienda, Long>{
+public interface TiendaDao extends CrudRepository<Tienda, Long> {
 
 }

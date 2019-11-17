@@ -11,15 +11,9 @@ import com.sprinter.customShop.service.implementation.ProductosServiceImpl;
 @RestController
 @RequestMapping("/productos")
 public class ProductosController extends AbstractController<ProductosDTO, Productos, Long> {
-	
-	
-	@Autowired
-	private ProductosServiceImpl productosService;
-	
+
 	protected ProductosController() {
 		super(Productos.class, ProductosDTO.class);
 	}
 
-	
-	
 }

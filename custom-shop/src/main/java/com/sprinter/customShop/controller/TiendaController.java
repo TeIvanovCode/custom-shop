@@ -9,7 +9,7 @@ import com.sprinter.customShop.entity.Tienda;
 @RestController
 @RequestMapping("/tienda")
 public class TiendaController extends AbstractController<TiendaDTO, Tienda, Long> {
-	
+
 	protected TiendaController() {
 		super(Tienda.class, TiendaDTO.class);
 	}

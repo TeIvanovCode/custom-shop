@@ -21,7 +21,7 @@ public class ProveedorDTO implements DTOEntity {
 	private String direccion;
 
 	private String pais;
-	
+
 	private List<ProductosDTO> productos = new ArrayList<>();
 
 }

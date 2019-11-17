@@ -26,24 +26,24 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "PROVEEDOR")
-public class Proveedor implements EntityPadre{
-	
+public class Proveedor implements EntityPadre {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
 	@Column
 	private String nombre;
-	
+
 	@Column
 	private String cif;
-	
+
 	@Column
 	private String direccion;
-	
+
 	@Column
 	private String pais;
-	
+
 	@OneToMany(mappedBy = "proveedor", fetch = FetchType.EAGER)
 	private List<Productos> productos = new ArrayList<>();
 }

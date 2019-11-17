@@ -10,6 +10,6 @@ import com.sprinter.customShop.entity.Tique;
  *
  */
 @Repository
-public interface TiquetDao extends CrudRepository<Tique, Long>{
+public interface TiquetDao extends CrudRepository<Tique, Long> {
 
 }
