@@ -1,13 +1,19 @@
 package com.sprinter.customShop.entity;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import com.sprinter.customShop.entity.enums.ModoPago;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,14 +31,13 @@ import lombok.Setter;
 public class Tique implements EntityPadre{
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE)
-	private Long idTique;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 
-	@Column
-	private LocalDate fecha;
+	@Temporal(TemporalType.DATE)
+	private Date fecha;
 	
-	// TODO: Posible cambio a enumeracion
-	@Column
-	private String modoPago;
+	@Enumerated(EnumType.STRING)
+	private ModoPago modoPago;
 	
 }

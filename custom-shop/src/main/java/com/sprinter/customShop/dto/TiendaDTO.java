@@ -1,6 +1,8 @@
 package com.sprinter.customShop.dto;
 
-import java.time.LocalDate;
+import java.util.Date;
+
+import com.sprinter.customShop.entity.enums.TipoTienda;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,7 +11,7 @@ import lombok.Setter;
 @Setter
 public class TiendaDTO implements DTOEntity {
 
-	private Long idTienda;
+	private Long id;
 
 	private String nombre;
 
@@ -17,7 +19,7 @@ public class TiendaDTO implements DTOEntity {
 
 	private String provincia;
 
-	private String tipo;
+	private TipoTienda tipoTienda;
 
-	private LocalDate fechaApertura;
+	private Date fechaApertura;
 }

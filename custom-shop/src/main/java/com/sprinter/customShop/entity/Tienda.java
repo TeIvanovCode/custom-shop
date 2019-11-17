@@ -1,13 +1,19 @@
 package com.sprinter.customShop.entity;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import com.sprinter.customShop.entity.enums.TipoTienda;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,8 +31,8 @@ import lombok.Setter;
 public class Tienda implements EntityPadre{
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE)
-	private Long idTienda;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 
 	@Column
 	private String nombre;
@@ -37,12 +43,11 @@ public class Tienda implements EntityPadre{
 	@Column
 	private String provincia;
 	
-	//TODO: posible cambio a enumeracion
-	@Column
-	private String tipo;
+	@Enumerated(EnumType.STRING)
+	private TipoTienda tipoTienda;
 	
-	@Column
-	private LocalDate fechaApertura;
+	@Temporal(TemporalType.DATE)
+	private Date fechaApertura;
 	
 }
 

@@ -2,6 +2,8 @@ package com.sprinter.customShop.dto;
 
 import java.math.BigDecimal;
 
+import com.sprinter.customShop.entity.Proveedor;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,7 +11,7 @@ import lombok.Setter;
 @Setter
 public class ProductosDTO implements DTOEntity {
 
-	private Long idProducto;
+	private Long id;
 
 	private String nombre;
 
@@ -21,6 +23,6 @@ public class ProductosDTO implements DTOEntity {
 
 	private String subSeccion;
 
-	private BigDecimal pvp;
+	private BigDecimal pvp;	
 
 }
